@@ -1,0 +1,11 @@
+---
+# =================================================
+# Install Git
+# =================================================
+- name: "Install required tools"
+  apt:
+    name: "{{ item }}"
+    update_cache: yes
+    state: present
+  loop:
+    - git
